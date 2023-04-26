@@ -14,9 +14,9 @@ app.use("/views", express.static(__dirname + "/views"));
 const wss = new WebSocket.Server({ port: 9090 });
 
 const client = device({
-  keyPath: "D:/private.pem.key",
-  certPath: "D:/certificate.pem.crt",
-  caPath: "D:/AmazonRootCA1.pem",
+  keyPath: "/home/chin/telecom-kmitl/key/private.pem.key",
+  certPath: "/home/chin/telecom-kmitl/key/certificate.pem.crt",
+  caPath: "/home/chin/telecom-kmitl/key/AmazonRootCA1.pem",
   clientId: "node",
   host: "a3tc60o8wobvo5-ats.iot.ap-southeast-1.amazonaws.com",
 });
