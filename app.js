@@ -3,6 +3,7 @@ const device = require("aws-iot-device-sdk").device;
 const express = require("express");
 const path = require('path');
 const app = express();
+const httpServer = http.createServer(app);
 const bodyParser = require("body-parser");
 const WebSocket = require("ws");
 app.set("view engine", "ejs");
