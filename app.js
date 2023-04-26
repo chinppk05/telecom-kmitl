@@ -1,3 +1,4 @@
+const http = require('http');
 const device = require("aws-iot-device-sdk").device;
 const express = require("express");
 const path = require('path');
@@ -52,6 +53,8 @@ app.get("/", (req, res) => {
   res.render("index"); // Render index.ejs view when client first connects
 });
 
-app.listen(9009, () => {
-  console.log("Server started on port 3000");
+// Run the server
+let PORT = process.env.PORT || 9009;
+httpServer.listen(PORT, () => {
+    console.log(`Server beating 💓 on port: ${PORT}`)
 });
